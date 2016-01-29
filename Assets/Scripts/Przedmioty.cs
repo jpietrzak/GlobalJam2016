@@ -4,8 +4,12 @@ using System.Collections;
 public class Przedmioty : MonoBehaviour {
     private  bool zamiana=false;
     public Material materialPoZmianaie;
-    public Renderer rend;
+    Renderer rend;
     int zmaiany = 0;
+    void Awake()
+    {
+        rend = gameObject.GetComponent<Renderer>();
+    }
 	// Update is called once per frame
 	void Update () {
         if( (zamiana==true) && (zmaiany == 0))
