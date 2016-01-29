@@ -5,20 +5,16 @@ public class Przedmioty : MonoBehaviour {
     private  bool zamiana=false;
     public Material materialPoZmianaie;
     public Renderer rend;
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
+    int zmaiany = 0;
 	// Update is called once per frame
 	void Update () {
-        if(zamiana==true)
+        if( (zamiana==true) && (zmaiany == 0))
         {
             rend.material = materialPoZmianaie;
         }
 	
 	}
-    void zmiana()
+    public void zmiana()
     {
         zamiana = true;
     }
