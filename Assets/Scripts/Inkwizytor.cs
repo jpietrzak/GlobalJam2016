@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Inkwizytor : MonoBehaviour 
 {
     public float speed = 3f;
