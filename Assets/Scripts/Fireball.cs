@@ -7,22 +7,32 @@ public class Fireball : MonoBehaviour {
     {
         objec = transform.parent.gameObject;
     }
-    void OnTriggerEnter(Collider other)
+    void Update()
     {
-
+        transform.position = objec.transform.position;
+    }
+    void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("nice");
+        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("touched fireboll!");
             Destroy(other.gameObject);
-        }
-        if (other.gameObject.tag == "Fireball")
-        {
-            return;
+            Destroy(objec);
         }
         else
         {
-            Debug.Log("objekt!");
-            Destroy(objec);
+            if (other.gameObject.tag == "Fireball")
+             {
+                return;
+             }
+             else
+             {
+                  Debug.Log("objekt!");
+                  Destroy(objec);
+             }
         }
+        
     }
 }
