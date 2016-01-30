@@ -9,19 +9,94 @@ ModelImporter:
     100002: Tail
     100004: //RootNode
     100006: Unicorn
+    100008: Be34
+    100010: Be344
+    100012: Be4453
+    100014: be567
+    100016: be567(mirrored)
+    100018: be568
+    100020: be568(mirrored)
+    100022: Be654
+    100024: Bn_tail
+    100026: bn_tail01
+    100028: bn_tail02
+    100030: bn_tail03
+    100032: Bone007
+    100034: Bone009
+    100036: Bone010
+    100038: Bone011
+    100040: Bone012
+    100042: Bone014
+    100044: Bone016
+    100046: Bone017
+    100048: Bone017(mirrored)
+    100050: Bone018
+    100052: Bone018(mirrored)
+    100054: Bone019
+    100056: Bone019(mirrored)
+    100058: Bone020
+    100060: Bone020(mirrored)
+    100062: Bone021
+    100064: Bone021(mirrored)
+    100066: Bone022
+    100068: Bone022(mirrored)
+    100070: IK Chain001
+    100072: IK Chain002
+    100074: IK Chain003
+    100076: IK Chain004
+    100078: Uniorn
     400000: Hair
     400002: Tail
     400004: //RootNode
     400006: Unicorn
+    400008: Be34
+    400010: Be344
+    400012: Be4453
+    400014: be567
+    400016: be567(mirrored)
+    400018: be568
+    400020: be568(mirrored)
+    400022: Be654
+    400024: Bn_tail
+    400026: bn_tail01
+    400028: bn_tail02
+    400030: bn_tail03
+    400032: Bone007
+    400034: Bone009
+    400036: Bone010
+    400038: Bone011
+    400040: Bone012
+    400042: Bone014
+    400044: Bone016
+    400046: Bone017
+    400048: Bone017(mirrored)
+    400050: Bone018
+    400052: Bone018(mirrored)
+    400054: Bone019
+    400056: Bone019(mirrored)
+    400058: Bone020
+    400060: Bone020(mirrored)
+    400062: Bone021
+    400064: Bone021(mirrored)
+    400066: Bone022
+    400068: Bone022(mirrored)
+    400070: IK Chain001
+    400072: IK Chain002
+    400074: IK Chain003
+    400076: IK Chain004
+    400078: Uniorn
     2300000: Hair
     2300002: Tail
     2300004: Unicorn
+    2300006: Uniorn
     3300000: Hair
     3300002: Tail
     3300004: Unicorn
+    3300006: Uniorn
     4300000: Unicorn
     4300002: Tail
     4300004: Hair
+    4300006: Uniorn
   materials:
     importMaterials: 1
     materialName: 0
