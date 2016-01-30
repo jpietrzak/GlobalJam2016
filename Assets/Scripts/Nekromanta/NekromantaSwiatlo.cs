@@ -5,6 +5,8 @@ public class NekromantaSwiatlo : MonoBehaviour {
     public GameObject Fireball;
     float czas = 3f;
     public float duration = 1.0F;
+    public int fbcount = 0;
+    public GameObject cage;
 
     // Use this for initialization
     void Start () {
@@ -22,9 +24,17 @@ public class NekromantaSwiatlo : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.tag == "Player")
         {
+            if(fbcount >= 3)
+            {
+                GameObject go = Instantiate(cage, GameObject.FindGameObjectWithTag("Player").transform.position, transform.rotation) as GameObject;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
+                StartCoroutine(unlockCage(go));
+            }
             Debug.Log("Throw fireball");
+            fbcount++;
             Instantiate(Fireball, transform.position, transform.rotation);
         }
     }
@@ -36,5 +46,12 @@ public class NekromantaSwiatlo : MonoBehaviour {
             Instantiate(Fireball, transform.position, transform.rotation);
             czas = Time.time;
         }
+    }
+
+    IEnumerator unlockCage(GameObject go)
+    {
+        yield return new WaitForSeconds(3);
+        Destroy(go);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
     }
 }

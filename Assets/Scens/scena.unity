@@ -1371,7 +1371,7 @@ Transform:
   m_GameObject: {fileID: 364280339}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.84, z: 0}
-  m_LocalScale: {x: 13, y: 0.01, z: 13}
+  m_LocalScale: {x: 16, y: 0.01, z: 16}
   m_Children: []
   m_Father: {fileID: 989038038}
   m_RootOrder: 2
@@ -3733,7 +3733,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7
+  m_Radius: 8.58
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!108 &1364715920
 Light:
@@ -3781,6 +3781,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fireball: {fileID: 182848, guid: 3f8a0395d7269cd43b70e3264cd7a354, type: 2}
   duration: 1
+  fbcount: 0
+  cage: {fileID: 121822, guid: 14234d52499b58b498d1b744909425ff, type: 2}
 --- !u!1 &1395735572
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: fd1798cd557026c458ed11f4e71c7d5d
-timeCreated: 1454098809
+timeCreated: 1454184332
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Fireball: {instanceID: 0}
+  - cage: {fileID: 121822, guid: 14234d52499b58b498d1b744909425ff, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
