@@ -13,23 +13,23 @@ public class Fireball : MonoBehaviour {
     }
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("nice");
-        Debug.Log(other.gameObject.tag);
+        //Debug.Log("nice");
+        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("touched fireboll!");
+            //Debug.Log("touched fireboll!");
             Destroy(other.gameObject);
             Destroy(objec);
         }
         else
         {
-            if (other.gameObject.tag == "Fireball")
+            if (other.gameObject.tag == "Fireball" || other.gameObject.tag == "Przedmiot")
              {
                 return;
              }
              else
              {
-                  Debug.Log("objekt!");
+                  //Debug.Log("objekt!");
                   Destroy(objec);
              }
         }

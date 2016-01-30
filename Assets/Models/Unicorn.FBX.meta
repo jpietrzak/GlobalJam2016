@@ -97,6 +97,11 @@ ModelImporter:
     4300002: Tail
     4300004: Hair
     4300006: Uniorn
+    7400000: Unicorn
+    11100000: //RootNode
+    13700000: Hair
+    13700002: Tail
+    13700004: Uniorn
   materials:
     importMaterials: 1
     materialName: 0
@@ -155,7 +160,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

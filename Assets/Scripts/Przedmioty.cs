@@ -6,7 +6,7 @@ public class Przedmioty : MonoBehaviour {
     public Material materialPoZmianaie;
     public Material orginalny;
     Renderer rend;
-    int zamiany = 0;
+    public int zamiany = 0;
     public GameObject rys1;
     void Awake()
     {
@@ -16,6 +16,7 @@ public class Przedmioty : MonoBehaviour {
 	void Update () {
         if( (zamiana==true) && (zamiany == 0))
         {
+            Debug.Log("render");
             rend.material = materialPoZmianaie;
             zamiany=1;
         }

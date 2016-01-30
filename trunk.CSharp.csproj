@@ -66,8 +66,9 @@
     <Compile Include="Assets\Scripts\Gra.cs" />
     <Compile Include="Assets\Scripts\Inkwizytor.cs" />
     <Compile Include="Assets\Scripts\Namierzanie.cs" />
-    <Compile Include="Assets\Scripts\Nekromanta.cs" />
-    <Compile Include="Assets\Scripts\NekromantaSwiatlo.cs" />
+    <Compile Include="Assets\Scripts\Nekromanta\Nekromanta.cs" />
+    <Compile Include="Assets\Scripts\Nekromanta\NekromantaColider.cs" />
+    <Compile Include="Assets\Scripts\Nekromanta\NekromantaSwiatlo.cs" />
     <Compile Include="Assets\Scripts\Paski.cs" />
     <Compile Include="Assets\Scripts\Przedmioty.cs" />
     <Compile Include="Assets\Scripts\Rysunek.cs" />

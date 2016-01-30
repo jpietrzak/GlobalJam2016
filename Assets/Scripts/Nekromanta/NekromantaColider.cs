@@ -10,12 +10,14 @@ public class NekromantaColider : MonoBehaviour {
     }
     void OnTriggerEnter(Collider collision)
     {
+        Debug.Log("s");
         Przedmioty prz = collision.GetComponentInParent<Przedmioty>();
-        if ((collision.tag == "Przedmiot") && (prz.zamiana == false))
+        if ((collision.tag == "Przedmiot") && (prz.zamiana == true))
         {
             Debug.Log("naprawa", collision.gameObject);
             Gra gr = partner.GetComponent<Gra>();
-            collision.GetComponentInParent<Przedmioty>().naprawa();
+            prz.naprawa();
+            this.GetComponentInParent<Nekromanta>().obniz_stability(5);
             gr.stability = gr.stability - spadek;
         }
     }
