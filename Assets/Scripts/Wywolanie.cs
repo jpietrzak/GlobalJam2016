@@ -11,7 +11,7 @@ public class Wywolanie : MonoBehaviour {
  void wywolaj()
     {
         Gra gr = partner.GetComponent<Gra>();
-        wartosc = gr.stability
+        wartosc = gr.stability;
         if(wartosc>70)
         {
             
