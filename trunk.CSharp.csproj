@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Fireball.cs" />
+    <Compile Include="Assets\Scripts\FireballBig.cs" />
     <Compile Include="Assets\Scripts\Gra.cs" />
     <Compile Include="Assets\Scripts\Inkwizytor.cs" />
     <Compile Include="Assets\Scripts\Namierzanie.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\Paski.cs" />
     <Compile Include="Assets\Scripts\Przedmioty.cs" />
     <Compile Include="Assets\Scripts\Rysunek.cs" />
+    <Compile Include="Assets\Scripts\WielkiDemon.cs" />
     <Compile Include="Assets\Scripts\Wywolanie.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

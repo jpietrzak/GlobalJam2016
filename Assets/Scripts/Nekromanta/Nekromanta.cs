@@ -43,6 +43,7 @@ public class Nekromanta : MonoBehaviour {
         
         if (the_end && !ended)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
             ended = true;
             foreach (Transform p in GameObject.Find("mapa").GetComponentInChildren<Transform>())
             {
@@ -52,6 +53,7 @@ public class Nekromanta : MonoBehaviour {
                     obniz_stability(10);
                 }
             }
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
             GameObject.Find("DemonSpawn").GetComponent<Wywolanie>().wywolaj();
         }
     }

@@ -30,12 +30,16 @@ public class Inkwizytor : MonoBehaviour
     }
     void OnCollisionStay(Collision collision)
     {
-        if((collision.gameObject.tag == "Przedmiot")||(collision.gameObject.tag == "Przedmiot1"))
+        //Debug.Log(collision.gameObject.name);
+        if ((collision.gameObject.tag == "Przedmiot") || (collision.gameObject.tag == "Przedmiot1"))
         {
             //Debug.Log("colisja", collision.gameObject);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (collision.gameObject.GetComponentInParent<Przedmioty>())
             {
-                collision.gameObject.GetComponentInParent<Przedmioty>().zmiana();
+                if (Input.GetKeyDown(KeyCode.Space) && collision.gameObject.GetComponentInParent<Przedmioty>().zamiany == 0)
+                {
+                    collision.gameObject.GetComponentInParent<Przedmioty>().zmiana();
+                }
             }
         }
     }
