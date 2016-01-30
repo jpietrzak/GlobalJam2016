@@ -30,8 +30,11 @@ public class Przedmioty : MonoBehaviour {
 	}
     public void zmiana()
     {
+        Destroy(GameObject.Find("shakeIt"));
         GameObject go = Instantiate(rys1, new Vector3(0,50f,50f), Quaternion.identity) as GameObject;
         go.GetComponent<Rysunek>().par = this.gameObject;
+        go.GetComponent<Rysunek>().distance = 150f;
+        go.name = "shakeIt";
     }
     public void naprawa()
     {

@@ -10,11 +10,12 @@ public class Fireball : MonoBehaviour {
     void Update()
     {
         transform.position = objec.transform.position;
+        //Debug.Log(transform.position);
     }
     void OnCollisionEnter(Collision other)
     {
         //Debug.Log("nice");
-        Debug.Log(other.gameObject.name);
+        //Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Player")
         {
             //Debug.Log("touched fireboll!");
