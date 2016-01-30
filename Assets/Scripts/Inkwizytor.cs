@@ -26,9 +26,9 @@ public class Inkwizytor : MonoBehaviour
     }
     void OnCollisionStay(Collision collision)
     {
-        if(collision.gameObject.tag == "Przedmiot")
+        if((collision.gameObject.tag == "Przedmiot")||(collision.gameObject.tag == "Przedmiot1"))
         {
-            Debug.Log("colisja", collision.gameObject);
+            //Debug.Log("colisja", collision.gameObject);
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 collision.gameObject.GetComponentInParent<Przedmioty>().zmiana();
