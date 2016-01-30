@@ -8,7 +8,6 @@ public class NekromantaColider : MonoBehaviour {
     }
     void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("s");
         Przedmioty prz = collision.GetComponentInParent<Przedmioty>();
         if ((collision.tag == "Przedmiot") && (prz.zamiana == true))
         {

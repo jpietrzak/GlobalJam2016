@@ -12,9 +12,8 @@ public class Wywolanie : MonoBehaviour {
     void Start()
     {
         partner = GameObject.FindGameObjectWithTag("GameController");
-        wywolaj();
     }
- void wywolaj()
+ public void wywolaj()
     {
         Gra gr = partner.GetComponent<Gra>();
         wartosc = gr.stability;

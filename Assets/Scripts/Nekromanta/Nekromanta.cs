@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Nekromanta : MonoBehaviour {
 
     public List<GameObject> trasa;
-    private int ile_petli = 2;
+    public int ile_petli = 1;
     private int cel = 1;
     public bool rusza_sie = true;
     public bool the_end = false;
@@ -52,6 +52,7 @@ public class Nekromanta : MonoBehaviour {
                     obniz_stability(10);
                 }
             }
+            GameObject.Find("DemonSpawn").GetComponent<Wywolanie>().wywolaj();
         }
     }
     public IEnumerator czekaj(int czas)

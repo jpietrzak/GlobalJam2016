@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class Paski : MonoBehaviour
     {
@@ -34,6 +35,7 @@ public class Paski : MonoBehaviour
 
         //Debug.Log(Time.time + " ; " + startTime + " ; "  + levelTime + " ; " + barWidth);
         timeBar.GetComponent<RectTransform>().sizeDelta = new Vector2(barWidth - barWidth * (Time.fixedTime - startTime) / levelTime, 20);
-        GameObject.Find("timeLeft").GetComponent<Text>().text = (levelTime - Time.fixedTime - startTime).ToString() + " s";
+        string tmp = !(String.IsNullOrEmpty((levelTime - Time.fixedTime - startTime).ToString()) || (levelTime - Time.fixedTime - startTime).ToString().Length < 4) ? (levelTime - Time.fixedTime - startTime).ToString().Substring(0,4) : (levelTime - Time.fixedTime - startTime).ToString();
+        GameObject.Find("timeLeft").GetComponent<Text>().text = tmp + " s";
     }
 }
