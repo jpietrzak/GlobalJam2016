@@ -2,11 +2,7 @@
 using System.Collections;
 
 public class Przedmioty : MonoBehaviour {
-<<<<<<< .mine
-    public  bool zamiana=false;
-=======
     public bool zamiana = false;
->>>>>>> .theirs
     public Material materialPoZmianaie;
     public Material orginalny;
     Renderer rend;
