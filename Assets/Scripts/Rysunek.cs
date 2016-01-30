@@ -4,51 +4,42 @@ using System.Collections;
 public class Rysunek : MonoBehaviour {
 
     public bool isDrawing = false;
-    public GameObject par;
+    public GameObject par = null;
+    public float distance;
+    private float doneDistance = 0;
+    Vector3 mousePos;
+    GameObject progressBar = null;
+    Vector3 initPos = new Vector3();
+    public GameObject pb;
+    public GameObject shaketxt;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         this.gameObject.transform.LookAt(Camera.main.transform);
+        this.gameObject.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position + Vector3.up * 4;
+        mousePos = Input.mousePosition;
+        initPos = this.gameObject.transform.position;
+        progressBar = pb;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
+        if (progressBar)
         {
-            //Debug.Log("elo");
-            RaycastHit hitInfo = new RaycastHit();
-            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-            Debug.Log(hitInfo.transform.name);
-            if (hit && hitInfo.transform.gameObject.tag == "drawable" && hitInfo.transform.gameObject.name == "start")
-            {
-                isDrawing = true;
-                Debug.Log("down");
-            }
-        }
+            shaketxt.transform.localRotation = Quaternion.Euler(new Vector3(0, -180, Random.Range(0, 5)));
 
-        if(Input.GetMouseButton(0) && isDrawing)
-        {
-            RaycastHit hitInfo = new RaycastHit();
-            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-
-            if (hit && hitInfo.transform.gameObject.tag == "drawable" && hitInfo.transform.gameObject.name == "end")
+            progressBar.transform.localScale = new Vector3(doneDistance / distance * 6.4f, progressBar.transform.localScale.y, progressBar.transform.localScale.z);
+            progressBar.transform.position = new Vector3(initPos.x + 3.2f - progressBar.transform.localScale.x / 2, initPos.y, initPos.z);
+            doneDistance += Vector3.Distance(mousePos, Input.mousePosition) / 100;
+            mousePos = Input.mousePosition;
+            if (distance < doneDistance)
             {
-                Debug.Log("done");
                 par.GetComponent<Przedmioty>().zamiana = true;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = true;
                 DestroyImmediate(this.gameObject);
             }
-            else if (hit && hitInfo.transform.gameObject.tag != "drawable")
-            {
-                isDrawing = false;
-                Debug.Log("out");
-            }
-        }
-
-        if(Input.GetMouseButtonUp(0) && isDrawing)
-        {
-            isDrawing = false;
-            Debug.Log("up");
         }
     }
 }

@@ -1,12 +1,14 @@
 fileFormatVersion: 2
 guid: e478b4e506ebd674e9fda92c4d88a81b
-timeCreated: 1454151604
+timeCreated: 1454167714
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - materialPoZmianaie: {instanceID: 0}
-  - rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
+  - materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9,
+      type: 2}
+  - orginalny: {fileID: 2100000, guid: 37386feaa2a1dde469f4dbabcfe5203c, type: 2}
+  - rys1: {fileID: 155060, guid: f9639621bcf70da42b9ca6abf2b7fe16, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

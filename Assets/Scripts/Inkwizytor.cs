@@ -7,6 +7,7 @@ public class Inkwizytor : MonoBehaviour
     public float speed = 3f;
     private Vector3 movement;
     Rigidbody playerRigidbody;
+    public bool canMove = true;
 
     void Awake()
     {
@@ -14,9 +15,12 @@ public class Inkwizytor : MonoBehaviour
     }
     void FixedUpdate()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-        Move(h, v);
+        if (canMove)
+        {
+            float h = Input.GetAxisRaw("Horizontal");
+            float v = Input.GetAxisRaw("Vertical");
+            Move(h, v);
+        }
     }
     void Move(float h, float v)
     {
