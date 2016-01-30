@@ -24,7 +24,6 @@ public class NekromantaSwiatlo : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-
         if (other.gameObject.tag == "Player")
         {
             if(fbcount >= 3)
@@ -42,7 +41,14 @@ public class NekromantaSwiatlo : MonoBehaviour {
     {
         if((other.gameObject.tag == "Player") && (Time.time - czas >= 1))
         {
-            //Debug.Log("touched!");
+            if (fbcount >= 3)
+            {
+                GameObject go = Instantiate(cage, GameObject.FindGameObjectWithTag("Player").transform.position, transform.rotation) as GameObject;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
+                StartCoroutine(unlockCage(go));
+            }
+            Debug.Log("Throw fireball");
+            fbcount++;
             Instantiate(Fireball, transform.position, transform.rotation);
             czas = Time.time;
         }
@@ -52,6 +58,7 @@ public class NekromantaSwiatlo : MonoBehaviour {
     {
         yield return new WaitForSeconds(3);
         Destroy(go);
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
+        if(GameObject.FindGameObjectWithTag("Player"))
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = true;
     }
 }

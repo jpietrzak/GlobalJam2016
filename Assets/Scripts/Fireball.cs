@@ -30,7 +30,7 @@ public class Fireball : MonoBehaviour {
              }
              else
              {
-                  //Debug.Log("objekt!");
+                  Debug.Log(other.gameObject.tag);
                   Destroy(objec);
              }
         }

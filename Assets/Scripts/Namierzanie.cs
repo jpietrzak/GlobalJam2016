@@ -33,7 +33,7 @@ public class Namierzanie : MonoBehaviour
                 timer -= Time.deltaTime;
             }
             Vector3 wector = transform.position;
-            wector.y = 8;
+            wector.y = 10;
             transform.position= wector;
         }
     }
