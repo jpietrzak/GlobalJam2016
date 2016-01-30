@@ -1,18 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Paski : MonoBehaviour
     {
-        public Color timeColor;
-        public Color stabilityColor;
-    public GameObject timeBar;
-    public GameObject stabilityBar;
-    public GameObject timeBarBg;
-    public GameObject stabilityBarBg;
-    public float barWidth;
-    
+        public GameObject timeBar;
+        public GameObject stabilityBar;
+        public GameObject timeBarBg;
+        public GameObject stabilityBarBg;
+        public float barWidth;
+        private float startTime;
+        public float levelTime;
+
     void Awake()
     {
+        startTime = Time.time;
         barWidth = Screen.width * 0.2f;
         timeBar.GetComponent<RectTransform>().sizeDelta = new Vector2(barWidth, 20);
         stabilityBar.GetComponent<RectTransform>().sizeDelta = new Vector2(barWidth, 20);
@@ -26,5 +28,7 @@ public class Paski : MonoBehaviour
         {
             stabilityBar.GetComponent<RectTransform>().sizeDelta = new Vector2(GameObject.FindGameObjectWithTag("GameController").GetComponent<Gra>().stability * barWidth / 100, 20);
         }
-	}
+
+        timeBar.GetComponent<RectTransform>().sizeDelta = new Vector2(barWidth - barWidth * (Time.fixedTime - startTime) / levelTime, 20);
+    }
 }

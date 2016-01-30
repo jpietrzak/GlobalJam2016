@@ -2,17 +2,19 @@
 using System.Collections;
 
 public class Przedmioty : MonoBehaviour {
-    private  bool zamiana=false;
+    public bool zamiana = false;
     public Material materialPoZmianaie;
     Renderer rend;
-    int zmaiany = 0;
+    int zmiany = 0;
+    public GameObject rys1;
+
     void Awake()
     {
         rend = gameObject.GetComponent<Renderer>();
     }
 	// Update is called once per frame
 	void Update () {
-        if( (zamiana==true) && (zmaiany == 0))
+        if( (zamiana==true) && (zmiany == 0))
         {
             rend.material = materialPoZmianaie;
         }
@@ -20,6 +22,7 @@ public class Przedmioty : MonoBehaviour {
 	}
     public void zmiana()
     {
-        zamiana = true;
+        GameObject go = Instantiate(rys1, new Vector3(0,50f,50f), Quaternion.identity) as GameObject;
+        go.GetComponent<Rysunek>().par = this.gameObject;
     }
 }
