@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: e478b4e506ebd674e9fda92c4d88a81b
-timeCreated: 1454091426
+timeCreated: 1454151604
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - materialPoZmianaie: {instanceID: 0}
+  - rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

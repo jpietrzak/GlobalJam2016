@@ -100,7 +100,7 @@ GameObject:
   m_Layer: 0
   m_Name: pulpit
   m_TagString: Przedmiot
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -128,7 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478b4e506ebd674e9fda92c4d88a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamiana: 0
   materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9, type: 2}
+  rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
 --- !u!23 &5756728
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -263,7 +265,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -425,7 +427,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -500,7 +502,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -676,7 +678,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -745,9 +747,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 288991703}
+  - 114: {fileID: 288991704}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -769,10 +772,21 @@ Transform:
   - {fileID: 144538483}
   - {fileID: 1094541683}
   - {fileID: 764903454}
-  - {fileID: 1537054435}
   - {fileID: 2008728844}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &288991704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 288991702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e981b8a714d8e4bb4055f06e9d468b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stability: 100
 --- !u!1 &313906168
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +800,7 @@ GameObject:
   m_Layer: 0
   m_Name: stability
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -801,11 +815,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008728844}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: -88.8}
-  m_SizeDelta: {x: 100, y: 30}
+  m_AnchoredPosition: {x: 20, y: -70}
+  m_SizeDelta: {x: 100, y: 20}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &313906170
 MonoBehaviour:
@@ -853,7 +867,7 @@ GameObject:
   m_Layer: 0
   m_Name: time
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -868,11 +882,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008728844}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: -48.8}
-  m_SizeDelta: {x: 100, y: 30}
+  m_AnchoredPosition: {x: 20, y: -40}
+  m_SizeDelta: {x: 100, y: 20}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &315924461
 MonoBehaviour:
@@ -895,7 +909,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -921,7 +935,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1025,6 +1039,11 @@ Prefab:
       propertyPath: m_Name
       value: filar_c
       objectReference: {fileID: 0}
+    - target: {fileID: 167016, guid: 771770df27a37244cb45e6112a92ab20, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 771770df27a37244cb45e6112a92ab20, type: 2}
   m_IsPrefabParent: 0
@@ -1043,7 +1062,7 @@ GameObject:
   m_Layer: 0
   m_Name: swiecznik (2)
   m_TagString: Przedmiot
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1071,7 +1090,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478b4e506ebd674e9fda92c4d88a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamiana: 0
   materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9, type: 2}
+  rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
 --- !u!23 &337932743
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1145,7 +1166,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a525fb0292971f0408eec31891a8abf7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1206,7 +1227,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1281,7 +1302,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1445,7 +1466,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a525fb0292971f0408eec31891a8abf7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1551,7 +1572,7 @@ GameObject:
   m_Layer: 0
   m_Name: biurko
   m_TagString: Przedmiot
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1579,7 +1600,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478b4e506ebd674e9fda92c4d88a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamiana: 0
   materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9, type: 2}
+  rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
 --- !u!23 &561592654
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1639,7 +1662,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1714,7 +1737,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1775,6 +1798,73 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 638086203}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &721186913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 721186914}
+  - 222: {fileID: 721186916}
+  - 114: {fileID: 721186915}
+  m_Layer: 0
+  m_Name: stability_bg
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &721186914
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 721186913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000017674936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2008728844}
+  m_RootOrder: 2
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 20.000008, y: -69.999954}
+  m_SizeDelta: {x: 100, y: 20}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &721186915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 721186913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.62352943, g: 0.62352943, b: 0.62352943, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &721186916
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 721186913}
 --- !u!1 &764903453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,6 +1911,7 @@ Transform:
   - {fileID: 337932741}
   - {fileID: 1019741337}
   - {fileID: 1698627408}
+  - {fileID: 1974744337}
   m_Father: {fileID: 288991703}
   m_RootOrder: 6
 --- !u!1 &846500533
@@ -2104,6 +2195,11 @@ Prefab:
       propertyPath: m_Name
       value: filar_p
       objectReference: {fileID: 0}
+    - target: {fileID: 167016, guid: 771770df27a37244cb45e6112a92ab20, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 771770df27a37244cb45e6112a92ab20, type: 2}
   m_IsPrefabParent: 0
@@ -2122,7 +2218,7 @@ GameObject:
   m_Layer: 0
   m_Name: Nekromanta
   m_TagString: Fireball
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2233,7 +2329,7 @@ GameObject:
   m_Layer: 0
   m_Name: swiecznik (3)
   m_TagString: Przedmiot
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2261,7 +2357,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478b4e506ebd674e9fda92c4d88a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamiana: 0
   materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9, type: 2}
+  rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
 --- !u!23 &1019741339
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2382,7 +2480,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2459,7 +2557,7 @@ GameObject:
   m_Layer: 0
   m_Name: Inkwizytor
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2562,7 +2660,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2637,7 +2735,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2713,7 +2811,7 @@ GameObject:
   m_Layer: 0
   m_Name: skrzynia
   m_TagString: Przedmiot
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2741,7 +2839,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478b4e506ebd674e9fda92c4d88a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamiana: 0
   materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9, type: 2}
+  rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
 --- !u!23 &1210210925
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2964,7 +3064,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3111,45 +3211,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 288991703}
   m_RootOrder: 0
---- !u!1 &1537054434
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1537054435}
-  - 114: {fileID: 1537054436}
-  m_Layer: 0
-  m_Name: draw1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1537054435
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1537054434}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 23, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 288991703}
-  m_RootOrder: 7
---- !u!114 &1537054436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1537054434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbc3ea4709f348846885230ae655a2d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1553548529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,7 +3225,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3239,7 +3300,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3314,7 +3375,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3390,7 +3451,7 @@ GameObject:
   m_Layer: 0
   m_Name: swiecznik (1)
   m_TagString: Przedmiot
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3418,7 +3479,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478b4e506ebd674e9fda92c4d88a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamiana: 0
   materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9, type: 2}
+  rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
 --- !u!23 &1669125162
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3519,7 +3582,7 @@ GameObject:
   m_Layer: 0
   m_Name: swiecznik (4)
   m_TagString: Przedmiot
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3547,7 +3610,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478b4e506ebd674e9fda92c4d88a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamiana: 0
   materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9, type: 2}
+  rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
 --- !u!23 &1698627410
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3607,7 +3672,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3683,7 +3748,7 @@ GameObject:
   m_Layer: 0
   m_Name: swiecznik
   m_TagString: Przedmiot
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3756,7 +3821,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478b4e506ebd674e9fda92c4d88a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamiana: 0
   materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9, type: 2}
+  rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
+--- !u!1 &1906842254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1906842255}
+  - 222: {fileID: 1906842257}
+  - 114: {fileID: 1906842256}
+  m_Layer: 0
+  m_Name: time_bg
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1906842255
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906842254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000017674936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2008728844}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 20.000038, y: -39.999954}
+  m_SizeDelta: {x: 100, y: 20}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1906842256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906842254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.625, g: 0.625, b: 0.625, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1906842257
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906842254}
 --- !u!1 &1921281930
 GameObject:
   m_ObjectHideFlags: 0
@@ -3811,7 +3945,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3927,7 +4061,7 @@ GameObject:
   m_Layer: 0
   m_Name: "p\xF3\u0142ka"
   m_TagString: Przedmiot
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3955,7 +4089,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478b4e506ebd674e9fda92c4d88a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamiana: 0
   materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9, type: 2}
+  rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
 --- !u!23 &1964676302
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4041,6 +4177,81 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1974744336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1974744337}
+  - 33: {fileID: 1974744340}
+  - 65: {fileID: 1974744339}
+  - 23: {fileID: 1974744338}
+  m_Layer: 0
+  m_Name: DemonSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1974744337
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974744336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.7, y: 7.5, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 764903454}
+  m_RootOrder: 21
+--- !u!23 &1974744338
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974744336}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &1974744339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974744336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1974744340
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974744336}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1983371149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4055,7 +4266,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4220,10 +4431,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1906842255}
   - {fileID: 315924460}
+  - {fileID: 721186914}
   - {fileID: 313906169}
   m_Father: {fileID: 288991703}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -4274,8 +4487,8 @@ Canvas:
   m_GameObject: {fileID: 2008728843}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1501685461}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4295,9 +4508,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ffc6434548be4741935f66c339830fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 180
-  timeColor: {r: 0.9264706, g: 0.36105105, b: 0.36105105, a: 0}
-  stabilityColor: {r: 0.54044116, g: 0.54044116, b: 0.875, a: 0}
+  timeBar: {fileID: 315924459}
+  stabilityBar: {fileID: 313906168}
+  timeBarBg: {fileID: 1906842254}
+  stabilityBarBg: {fileID: 721186913}
+  barWidth: 0
+  levelTime: 20
 --- !u!1001 &2019277650
 Prefab:
   m_ObjectHideFlags: 0
@@ -4341,6 +4557,11 @@ Prefab:
       propertyPath: m_Name
       value: filar_l
       objectReference: {fileID: 0}
+    - target: {fileID: 167016, guid: 771770df27a37244cb45e6112a92ab20, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 771770df27a37244cb45e6112a92ab20, type: 2}
   m_IsPrefabParent: 0
@@ -4358,7 +4579,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0
   m_TagString: czekaj
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4434,7 +4655,7 @@ GameObject:
   m_Layer: 0
   m_Name: "o\u0142tarz"
   m_TagString: Przedmiot
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4462,7 +4683,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478b4e506ebd674e9fda92c4d88a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zamiana: 0
   materialPoZmianaie: {fileID: 2100000, guid: a2e4bd12af7741a4986b8a1a1b3bfcf9, type: 2}
+  rys1: {fileID: 162794, guid: 93e4e888de956c24d85f1abc758c4031, type: 2}
 --- !u!23 &2079162026
 MeshRenderer:
   m_ObjectHideFlags: 0
