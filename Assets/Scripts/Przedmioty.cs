@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Przedmioty : MonoBehaviour {
     public bool zamiana = false;
-    public Material materialPoZmianaie;
-    public Material orginalny;
+    public Texture materialPoZmianaie;
+    public Texture orginalny;
     Renderer rend;
     public int zamiany = 0;
     public GameObject rys1;
@@ -17,13 +17,13 @@ public class Przedmioty : MonoBehaviour {
         if( (zamiana==true) && (zamiany == 0))
         {
             Debug.Log("render");
-            rend.material = materialPoZmianaie;
+            rend.material.mainTexture= materialPoZmianaie;
             zamiany=1;
         }
         if((zamiana == false)&& (zamiany ==1))
         {
             Debug.Log("render");
-            rend.material = orginalny;
+            rend.material.mainTexture = orginalny;
             zamiany = 0;
         }
 	

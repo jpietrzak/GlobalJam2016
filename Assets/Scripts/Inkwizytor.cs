@@ -35,4 +35,8 @@ public class Inkwizytor : MonoBehaviour
             }
         }
     }
+    public void blokuj()
+    {
+    
+    }
 }
