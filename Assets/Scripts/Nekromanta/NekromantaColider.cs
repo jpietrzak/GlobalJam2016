@@ -18,7 +18,6 @@ public class NekromantaColider : MonoBehaviour {
             Gra gr = partner.GetComponent<Gra>();
             prz.naprawa();
             this.GetComponentInParent<Nekromanta>().obniz_stability(5);
-            gr.stability = gr.stability - spadek;
         }
     }
 }

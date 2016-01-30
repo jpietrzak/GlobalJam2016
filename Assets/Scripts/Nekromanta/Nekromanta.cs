@@ -8,8 +8,10 @@ public class Nekromanta : MonoBehaviour {
     public List<GameObject> trasa;
     private int ile_petli = 2;
     private int cel = 1;
-    private bool rusza_sie = false;
+    public bool rusza_sie = true;
+    public bool the_end = false;
     public float szybkosc = 3.0f;
+    public bool ended = false;
     
 
     // Use this for initialization
@@ -35,7 +37,21 @@ public class Nekromanta : MonoBehaviour {
         }
         else if (ile_petli <= 0)
         {
+            the_end = true;
             rusza_sie = false;
+        }
+        
+        if (the_end && !ended)
+        {
+            ended = true;
+            foreach (Transform p in GameObject.Find("mapa").GetComponentInChildren<Transform>())
+            {
+                if(p.gameObject.name == "swiecznik_st" || p.gameObject.name == "pentagram")
+                {
+                    if (p.gameObject.GetComponent<Przedmioty>().zamiany == 1)
+                    obniz_stability(10);
+                }
+            }
         }
     }
     public IEnumerator czekaj(int czas)
@@ -53,6 +69,7 @@ public class Nekromanta : MonoBehaviour {
 
     public void obniz_stability(int ile)
     {
+        Debug.Log("stability - " + ile);
         GameObject.FindGameObjectWithTag("GameController").GetComponent<Gra>().stability -= ile;
     }
 }
