@@ -3,7 +3,7 @@ using System.Collections;
 
 public class NekromantaSwiatlo : MonoBehaviour {
     public GameObject Fireball;
-    float czas = 0f;
+    float czas = 3f;
     public float duration = 1.0F;
 
     // Use this for initialization
@@ -30,9 +30,7 @@ public class NekromantaSwiatlo : MonoBehaviour {
     }
     void OnTriggerStay(Collider other)
     {
-
-        czas = Time.time - czas;
-        if((other.gameObject.tag == "Player") && (czas>=3))
+        if((other.gameObject.tag == "Player") && (Time.time - czas >= 3))
         {
             Debug.Log("touched!");
             Instantiate(Fireball, transform.position, transform.rotation);

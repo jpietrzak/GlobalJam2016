@@ -2,11 +2,16 @@
 using System.Collections;
 
 public class Przedmioty : MonoBehaviour {
+<<<<<<< .mine
     public  bool zamiana=false;
+=======
+    public bool zamiana = false;
+>>>>>>> .theirs
     public Material materialPoZmianaie;
     public Material orginalny;
     Renderer rend;
     int zamiany = 0;
+    public GameObject rys1;
     void Awake()
     {
         rend = gameObject.GetComponent<Renderer>();
@@ -28,7 +33,8 @@ public class Przedmioty : MonoBehaviour {
 	}
     public void zmiana()
     {
-        zamiana = true;
+        GameObject go = Instantiate(rys1, new Vector3(0,50f,50f), Quaternion.identity) as GameObject;
+        go.GetComponent<Rysunek>().par = this.gameObject;
     }
     public void naprawa()
     {

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Przedmiot
   - Fireball
+  - drawable
   layers:
   - Default
   - TransparentFX
