@@ -12,7 +12,9 @@ public class Nekromanta : MonoBehaviour {
     public bool the_end = false;
     public float szybkosc = 3.0f;
     public bool ended = false;
-    
+    public GameObject costamtext;
+    int tmp = 0;
+
 
     // Use this for initialization
     void Start () {
@@ -43,17 +45,39 @@ public class Nekromanta : MonoBehaviour {
         
         if (the_end && !ended)
         {
+            if(GameObject.FindGameObjectWithTag("Player"))
             GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
             ended = true;
             foreach (Transform p in GameObject.Find("mapa").GetComponentInChildren<Transform>())
             {
-                if(p.gameObject.name == "swiecznik_st" || p.gameObject.name == "pentagram")
+                if (p.gameObject.name == "pentagram")
                 {
-                    if (p.gameObject.GetComponent<Przedmioty>().zamiany == 1)
-                    obniz_stability(10);
+                    Debug.Log("child");
+                    if (p.GetComponent<Przedmioty>().zamiany == 1)
+                    {
+                        tmp = tmp + 10;
+                        Debug.Log("+10");
+                    }
+                }
+                else if (p.gameObject.name == "swiecznik_stoj")
+                {
+                    foreach (Transform r in p.GetComponentInChildren<Transform>())
+                    {
+                        if (r.gameObject.name == "swiecznik_st")
+                        {
+                            Debug.Log("child");
+                            if (r.GetComponent<Przedmioty>().zamiany == 1)
+                            {
+                                tmp = tmp + 10;
+                                Debug.Log("+10");
+                            }
+                        }
+                    }
                 }
             }
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
+            obniz_stability(tmp, this.gameObject);
+            if (GameObject.FindGameObjectWithTag("Player"))
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
             GameObject.Find("DemonSpawn").GetComponent<Wywolanie>().wywolaj();
         }
     }
@@ -70,9 +94,12 @@ public class Nekromanta : MonoBehaviour {
         rusza_sie = true;
     }
 
-    public void obniz_stability(int ile)
+    public void obniz_stability(int ile, GameObject target)
     {
         Debug.Log("stability - " + ile);
+        GameObject cos = Instantiate(costamtext, target.transform.position + Vector3.up * 4, Quaternion.Euler(0, 180, 0)) as GameObject;
+        cos.GetComponent<TextMesh>().text = "- " + ile.ToString();
+        cos.transform.SetParent(target.transform);
         GameObject.FindGameObjectWithTag("GameController").GetComponent<Gra>().stability -= ile;
     }
 }

@@ -250,7 +250,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: a525fb0292971f0408eec31891a8abf7, type: 2}
+  - {fileID: 2100000, guid: 3e5f8692cda99f14bb71e41a7658bac8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -463,6 +463,10 @@ Prefab:
       value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 142662, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
+      propertyPath: m_Name
+      value: swiecznik_stoj
+      objectReference: {fileID: 0}
+    - target: {fileID: 187652, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
       propertyPath: m_Name
       value: swiecznik_st
       objectReference: {fileID: 0}
@@ -1449,6 +1453,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 142662, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
       propertyPath: m_Name
+      value: swiecznik_stoj
+      objectReference: {fileID: 0}
+    - target: {fileID: 187652, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
+      propertyPath: m_Name
       value: swiecznik_st
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1498,7 +1506,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: a525fb0292971f0408eec31891a8abf7, type: 2}
+  - {fileID: 2100000, guid: 3e5f8692cda99f14bb71e41a7658bac8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1881,7 +1889,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: a525fb0292971f0408eec31891a8abf7, type: 2}
+  - {fileID: 2100000, guid: 3e5f8692cda99f14bb71e41a7658bac8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2110,7 +2118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spadek: 5
-  costamtext: {fileID: 106264, guid: c213376db0aefef4faa83eac2bdbe2ff, type: 2}
 --- !u!136 &627796416
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3009,8 +3016,9 @@ MonoBehaviour:
   ile_petli: 1
   rusza_sie: 1
   the_end: 0
-  szybkosc: 10
+  szybkosc: 100
   ended: 0
+  costamtext: {fileID: 106264, guid: c213376db0aefef4faa83eac2bdbe2ff, type: 2}
 --- !u!23 &989038035
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3272,6 +3280,10 @@ Prefab:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 142662, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
+      propertyPath: m_Name
+      value: swiecznik_stoj
+      objectReference: {fileID: 0}
+    - target: {fileID: 187652, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
       propertyPath: m_Name
       value: swiecznik_st
       objectReference: {fileID: 0}
@@ -3688,7 +3700,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 142662, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
       propertyPath: m_Name
-      value: swiecznik_st
+      value: swiecznik_stoj
       objectReference: {fileID: 0}
     - target: {fileID: 417700, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
       propertyPath: m_RootOrder
@@ -3705,6 +3717,10 @@ Prefab:
     - target: {fileID: 433978, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 187652, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
+      propertyPath: m_Name
+      value: swiecznik_st
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
@@ -5625,6 +5641,10 @@ Prefab:
       value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 142662, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
+      propertyPath: m_Name
+      value: swiecznik_stoj
+      objectReference: {fileID: 0}
+    - target: {fileID: 187652, guid: 8434bbd1f2404c749af2af9d748cd7d8, type: 2}
       propertyPath: m_Name
       value: swiecznik_st
       objectReference: {fileID: 0}
