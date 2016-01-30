@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class NekromantaSwiatlo : MonoBehaviour {
+    public GameObject Fireball;
 
     public float duration = 1.0F;
 
@@ -24,7 +25,7 @@ public class NekromantaSwiatlo : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("touched!");
-            Destroy(other.gameObject);
+            Instantiate(Fireball, transform.position, transform.rotation);
         }
     }
 }

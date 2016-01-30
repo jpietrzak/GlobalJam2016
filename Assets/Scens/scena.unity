@@ -202,7 +202,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a525fb0292971f0408eec31891a8abf7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1985,7 +1985,7 @@ GameObject:
   - 114: {fileID: 989038034}
   m_Layer: 0
   m_Name: Nekromanta
-  m_TagString: Untagged
+  m_TagString: Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2322,7 +2322,7 @@ GameObject:
   - 114: {fileID: 1094541684}
   m_Layer: 0
   m_Name: Inkwizytor
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2338,7 +2338,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -2395,7 +2395,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1094541678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 8, z: 6.2}
+  m_LocalPosition: {x: 15, y: 8, z: -21.4}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 288991703}
@@ -2739,7 +2739,7 @@ GameObject:
   - 114: {fileID: 1364715921}
   m_Layer: 0
   m_Name: swiatlo
-  m_TagString: Untagged
+  m_TagString: Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2812,6 +2812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd1798cd557026c458ed11f4e71c7d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fireball: {fileID: 182848, guid: 3f8a0395d7269cd43b70e3264cd7a354, type: 2}
   duration: 1
 --- !u!1 &1398093788
 GameObject:
@@ -2900,6 +2901,7 @@ GameObject:
   - 92: {fileID: 1501685460}
   - 124: {fileID: 1501685459}
   - 81: {fileID: 1501685458}
+  - 114: {fileID: 1501685463}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2974,6 +2976,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 288991703}
   m_RootOrder: 0
+--- !u!114 &1501685463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501685457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ffc6434548be4741935f66c339830fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTime: 180
+  timeTexture: {fileID: 2800000, guid: 60147e8d9bd0eaa4dbfbd695b6d46a8e, type: 3}
+  spellTexture: {fileID: 2800000, guid: 7191625ae723c774fb0544d76d4fcce7, type: 3}
 --- !u!1 &1553548529
 GameObject:
   m_ObjectHideFlags: 0
