@@ -24,15 +24,15 @@ public class NekromantaSwiatlo : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("touched!");
+            Debug.Log("Throw fireball");
             Instantiate(Fireball, transform.position, transform.rotation);
         }
     }
     void OnTriggerStay(Collider other)
     {
-        if((other.gameObject.tag == "Player") && (Time.time - czas >= 3))
+        if((other.gameObject.tag == "Player") && (Time.time - czas >= 1))
         {
-            Debug.Log("touched!");
+            //Debug.Log("touched!");
             Instantiate(Fireball, transform.position, transform.rotation);
             czas = Time.time;
         }
