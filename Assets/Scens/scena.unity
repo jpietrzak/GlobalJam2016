@@ -133,6 +133,7 @@ MonoBehaviour:
   orginalny: {fileID: 2800000, guid: 89c8ca776d2f4cb4b9c51a10a9d19211, type: 3}
   zamiany: 0
   rys1: {fileID: 155060, guid: f9639621bcf70da42b9ca6abf2b7fe16, type: 2}
+  done: 0
 --- !u!23 &5756728
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -423,6 +424,7 @@ MonoBehaviour:
   orginalny: {fileID: 2800000, guid: 2055955b679c3f74bbd31aa08b698d5f, type: 3}
   zamiany: 0
   rys1: {fileID: 155060, guid: f9639621bcf70da42b9ca6abf2b7fe16, type: 2}
+  done: 0
 --- !u!1001 &80384022
 Prefab:
   m_ObjectHideFlags: 0
@@ -639,6 +641,64 @@ Transform:
   - {fileID: 210937470}
   m_Father: {fileID: 288991703}
   m_RootOrder: 4
+--- !u!1001 &208046197
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 288991703}
+    m_Modifications:
+    - target: {fileID: 463952, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463952, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463952, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463952, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463952, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463952, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463952, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 463952, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 422604, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.652904
+      objectReference: {fileID: 0}
+    - target: {fileID: 422604, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.27150786
+      objectReference: {fileID: 0}
+    - target: {fileID: 422604, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.2715078
+      objectReference: {fileID: 0}
+    - target: {fileID: 422604, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.6529038
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &210937469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,6 +1122,7 @@ Transform:
   - {fileID: 1094541683}
   - {fileID: 764903454}
   - {fileID: 2008728844}
+  - {fileID: 1129010146}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &288991704
@@ -1678,6 +1739,7 @@ MonoBehaviour:
   orginalny: {fileID: 2800000, guid: 3a4c8767925b7ee468d95f3c9923d166, type: 3}
   zamiany: 0
   rys1: {fileID: 155060, guid: f9639621bcf70da42b9ca6abf2b7fe16, type: 2}
+  done: 0
 --- !u!23 &452302438
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3165,6 +3227,7 @@ MonoBehaviour:
   orginalny: {fileID: 0}
   zamiany: 0
   rys1: {fileID: 155060, guid: f9639621bcf70da42b9ca6abf2b7fe16, type: 2}
+  done: 0
 --- !u!1 &1063235921
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,6 +3574,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1110463799}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1129010146 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 463952, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+  m_PrefabInternal: {fileID: 208046197}
 --- !u!1 &1146059874
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,6 +3860,7 @@ MonoBehaviour:
   orginalny: {fileID: 2800000, guid: 2055955b679c3f74bbd31aa08b698d5f, type: 3}
   zamiany: 0
   rys1: {fileID: 155060, guid: f9639621bcf70da42b9ca6abf2b7fe16, type: 2}
+  done: 0
 --- !u!1 &1342828406
 GameObject:
   m_ObjectHideFlags: 0
@@ -4725,6 +4793,7 @@ MonoBehaviour:
   orginalny: {fileID: 0}
   zamiany: 0
   rys1: {fileID: 155060, guid: f9639621bcf70da42b9ca6abf2b7fe16, type: 2}
+  done: 0
 --- !u!1 &1906842254
 GameObject:
   m_ObjectHideFlags: 0
@@ -4985,6 +5054,7 @@ MonoBehaviour:
   orginalny: {fileID: 2800000, guid: 89c8ca776d2f4cb4b9c51a10a9d19211, type: 3}
   zamiany: 0
   rys1: {fileID: 155060, guid: f9639621bcf70da42b9ca6abf2b7fe16, type: 2}
+  done: 0
 --- !u!23 &1964676302
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5055,8 +5125,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1974744336}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.04, y: 7.67, z: 3.38}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 3.45, y: 7.67, z: 3.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 764903454}
@@ -5117,10 +5187,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6f478ba18f53d40b5880dce18e483c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jednorozec: {fileID: 197928, guid: 41a1450365af9f94182a4c19174f6139, type: 2}
-  wybuch: {fileID: 197928, guid: 41a1450365af9f94182a4c19174f6139, type: 2}
-  wielkiDemon: {fileID: 108628, guid: 639d6e500c765e642acde0bbb72f9950, type: 2}
-  malyDemon: {fileID: 197928, guid: 41a1450365af9f94182a4c19174f6139, type: 2}
+  jednorozec: {fileID: 185228, guid: 6c3599f6f84868d428686a6211ca8e81, type: 2}
+  wybuch: {fileID: 176354, guid: 0a1500feeb47f1348ae67a7b9f3c49df, type: 2}
+  demon: {fileID: 100004, guid: 89a7a1fb757b2074eb5cff31d4fa64d9, type: 3}
+  rozowy_dymek: {fileID: 188390, guid: 71126b9950424a6469ebbb69dc5687a0, type: 2}
+  przyzwany: {fileID: 0}
+  efekt: {fileID: 0}
 --- !u!1 &1983371149
 GameObject:
   m_ObjectHideFlags: 0
@@ -5526,6 +5598,7 @@ MonoBehaviour:
   orginalny: {fileID: 0}
   zamiany: 0
   rys1: {fileID: 155060, guid: f9639621bcf70da42b9ca6abf2b7fe16, type: 2}
+  done: 0
 --- !u!1 &2070780936
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,8 +10,14 @@ public class Gra : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	    if(Input.GetKeyDown(KeyCode.R))
+	void Update ()
+    {
+        if(stability < 10)
+        {
+            stability = 10;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("scena");
         }

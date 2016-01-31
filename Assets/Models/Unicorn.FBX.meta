@@ -122,7 +122,113 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Unicorn
+      takeName: Unicorn
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bone007
+        weight: 1
+      - path: Bone007/Bn_tail
+        weight: 1
+      - path: Bone007/Bn_tail/bn_tail01
+        weight: 1
+      - path: Bone007/Bn_tail/bn_tail01/bn_tail02
+        weight: 1
+      - path: Bone007/Bn_tail/bn_tail01/bn_tail02/bn_tail03
+        weight: 1
+      - path: Bone007/Bn_tail/bn_tail01/bn_tail02/bn_tail03/Be4453
+        weight: 1
+      - path: Bone007/Bone009
+        weight: 1
+      - path: Bone007/Bone009/Bone010
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone011
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone011/Bone012
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone011/Bone012/Be34
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone011/Bone012/Be34/Bone014
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone011/Bone012/Be34/Bone014/Be344
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone011/Bone012/Be34/Bone016
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone011/Bone012/Be34/Bone016/Be654
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone020
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone020/Bone021
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone020/Bone021/Bone022
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone020/Bone021/Bone022/be568
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone020(mirrored)
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone020(mirrored)/Bone021(mirrored)
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone020(mirrored)/Bone021(mirrored)/Bone022(mirrored)
+        weight: 1
+      - path: Bone007/Bone009/Bone010/Bone020(mirrored)/Bone021(mirrored)/Bone022(mirrored)/be568(mirrored)
+        weight: 1
+      - path: Bone007/Bone017
+        weight: 1
+      - path: Bone007/Bone017/Bone018
+        weight: 1
+      - path: Bone007/Bone017/Bone018/Bone019
+        weight: 1
+      - path: Bone007/Bone017/Bone018/Bone019/be567
+        weight: 1
+      - path: Bone007/Bone017(mirrored)
+        weight: 1
+      - path: Bone007/Bone017(mirrored)/Bone018(mirrored)
+        weight: 1
+      - path: Bone007/Bone017(mirrored)/Bone018(mirrored)/Bone019(mirrored)
+        weight: 1
+      - path: Bone007/Bone017(mirrored)/Bone018(mirrored)/Bone019(mirrored)/be567(mirrored)
+        weight: 1
+      - path: Hair
+        weight: 1
+      - path: IK Chain001
+        weight: 1
+      - path: IK Chain002
+        weight: 1
+      - path: IK Chain003
+        weight: 1
+      - path: IK Chain004
+        weight: 1
+      - path: Tail
+        weight: 1
+      - path: Uniorn
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
