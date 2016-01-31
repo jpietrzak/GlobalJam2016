@@ -66,6 +66,7 @@ public class Wywolanie : MonoBehaviour
         if (wartosc > 70)
         {
             Debug.Log("Wielki demon");
+            GameObject.Find("GameController").GetComponent<Gra>().endGame(false);
             przyzwany = Instantiate(demon, transform.position + Vector3.up * 6f, transform.rotation) as GameObject;
             przyzwany.transform.localRotation = Quaternion.Euler(0, -140, 0);
             przyzwany.transform.localScale = Vector3.one * 1f;
@@ -78,6 +79,7 @@ public class Wywolanie : MonoBehaviour
         else if (wartosc > 40)
         {
             Debug.Log("Mały demon");
+            GameObject.Find("GameController").GetComponent<Gra>().endGame(true);
             efekt = Instantiate(rozowy_dymek, transform.position, transform.rotation) as GameObject;
             przyzwany = Instantiate(demon, transform.position + Vector3.up * 4f, transform.rotation) as GameObject;
             przyzwany.transform.localScale = Vector3.one * 0.2f;
@@ -88,10 +90,12 @@ public class Wywolanie : MonoBehaviour
         else if (wartosc > 15)
         {
             Debug.Log("Wybuch");
+            GameObject.Find("GameController").GetComponent<Gra>().endGame(true);
         }
         else
         {
             Debug.Log("jednorożec");
+            GameObject.Find("GameController").GetComponent<Gra>().endGame(true);
             przyzwany = Instantiate(jednorozec, transform.position + Vector3.up * 9, transform.rotation) as GameObject;
             przyzwany.transform.localScale = Vector3.one * 0.1f;
             przyzwany.transform.localRotation = Quaternion.Euler(0, -140, 0);

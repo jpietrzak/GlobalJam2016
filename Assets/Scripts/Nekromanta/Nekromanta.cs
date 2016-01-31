@@ -80,11 +80,18 @@ public class Nekromanta : MonoBehaviour {
             obniz_stability(tmp, this.gameObject);
             if (GameObject.FindGameObjectWithTag("Player"))
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Inkwizytor>().canMove = false;
+
+            this.transform.Rotate(Vector3.down * 90);
+            this.GetComponentInChildren<Animation>().Play("CzarAttackPose");
+            this.GetComponentInChildren<Animation>().PlayQueued("CzarAttackPose");
+            this.GetComponentInChildren<Animation>().PlayQueued("CzarAttackPose");
             GameObject.Find("DemonSpawn").GetComponent<Wywolanie>().wywolaj();
         }
     }
     public IEnumerator czekaj(int czas)
     {
+        if(czas != 0 && !this.GetComponentInChildren<Animation>().IsPlaying("CzarDoingPose"))
+            this.GetComponentInChildren<Animation>().Play("nonPose");
         rusza_sie = false;
         cel++;
         if (cel >= trasa.Count)
@@ -94,6 +101,8 @@ public class Nekromanta : MonoBehaviour {
         }
         yield return new WaitForSeconds(czas);
         rusza_sie = true;
+        if(!this.GetComponentInChildren<Animation>().IsPlaying("CzarWalkingPose"))
+            this.GetComponentInChildren<Animation>().Play("CzarWalkingPose");
     }
 
     public void obniz_stability(int ile, GameObject target)

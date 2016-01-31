@@ -15,6 +15,7 @@ public class Inkwizytor : MonoBehaviour
     }
     void FixedUpdate()
     {
+        this.GetComponent<Rigidbody>().velocity = Vector3.zero;
         if (canMove)
         {
             float h = Input.GetAxisRaw("Horizontal");
@@ -24,7 +25,42 @@ public class Inkwizytor : MonoBehaviour
     }
     void Move(float h, float v)
     {
+        Debug.Log(Input.GetAxisRaw("Horizontal") + "----" + Input.GetAxisRaw("Vertical"));
         movement.Set(h, 0f, v);
+        
+        //gora
+        if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+        {
+            if (!this.GetComponentInChildren<Animation>().IsPlaying("InkStandingPose"))
+            {
+                this.GetComponentInChildren<Animation>().Play("InkStandingPose");
+            }
+        }
+        if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") > 0)
+        { this.gameObject.transform.localRotation = (Quaternion.Euler(0, -135, 0));
+            if (!this.GetComponentInChildren<Animation>().IsPlaying("InkWalkingPose"))
+                this.GetComponentInChildren<Animation>().Play("InkWalkingPose");
+        }
+        //dol
+        if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") < 0)
+        { this.gameObject.transform.localRotation = (Quaternion.Euler(0, 45, 0));
+            if (!this.GetComponentInChildren<Animation>().IsPlaying("InkWalkingPose"))
+                this.GetComponentInChildren<Animation>().Play("InkWalkingPose");
+        }
+        //prawo
+        if (Input.GetAxisRaw("Horizontal") > 0 && Input.GetAxisRaw("Vertical") == 0)
+        { this.gameObject.transform.localRotation = (Quaternion.Euler(0, -45, 0));
+            if (!this.GetComponentInChildren<Animation>().IsPlaying("InkWalkingPose"))
+                this.GetComponentInChildren<Animation>().Play("InkWalkingPose");
+        }
+        //lewo
+        if (Input.GetAxisRaw("Horizontal") < 0 && Input.GetAxisRaw("Vertical") == 0)
+        { this.gameObject.transform.localRotation = (Quaternion.Euler(0, 135, 0));
+            if (!this.GetComponentInChildren<Animation>().IsPlaying("InkWalkingPose"))
+                this.GetComponentInChildren<Animation>().Play("InkWalkingPose");
+        }
+        
+
         movement = movement.normalized * (-speed) * Time.deltaTime;
         playerRigidbody.MovePosition(transform.position + movement);
     }
@@ -38,6 +74,7 @@ public class Inkwizytor : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space) && collision.gameObject.GetComponentInParent<Przedmioty>().zamiany == 0)
                 {
+                    this.GetComponentInChildren<Animation>().Play("InkDoingPose");
                     collision.gameObject.GetComponentInParent<Przedmioty>().zmiana();
                 }
             }
@@ -46,5 +83,11 @@ public class Inkwizytor : MonoBehaviour
     public void blokuj()
     {
     
+    }
+
+    public void KillMe()
+    {
+        this.GetComponentInChildren<Animation>().Play("InkDyingPose");
+        Destroy(this.gameObject, 2);
     }
 }

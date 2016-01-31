@@ -34,6 +34,7 @@ public class NekromantaSwiatlo : MonoBehaviour {
             }
             Debug.Log("Throw fireball");
             fbcount++;
+            this.transform.parent.gameObject.GetComponentInChildren<Animation>().Play("CzarAttackPose");
             Instantiate(Fireball, transform.position, transform.rotation);
         }
     }
@@ -49,6 +50,7 @@ public class NekromantaSwiatlo : MonoBehaviour {
             }
             Debug.Log("Throw fireball");
             fbcount++;
+            this.transform.parent.gameObject.GetComponentInChildren<Animation>().Play("CzarAttackPose");
             Instantiate(Fireball, transform.position, transform.rotation);
             czas = Time.time;
         }

@@ -19,7 +19,7 @@ public class Fireball : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             //Debug.Log("touched fireboll!");
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Inkwizytor>().KillMe();
             Destroy(objec);
             GameObject.FindGameObjectWithTag("GameController").GetComponent<Gra>().endGame(false);
         }
