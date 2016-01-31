@@ -22,7 +22,11 @@ public class Gra : MonoBehaviour {
         {
             SceneManager.LoadScene("scena");
         }
-	}
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Start");
+        }
+    }
 
     public void endGame(bool f)
     {

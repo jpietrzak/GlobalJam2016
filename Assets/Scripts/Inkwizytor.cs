@@ -88,6 +88,7 @@ public class Inkwizytor : MonoBehaviour
     public void KillMe()
     {
         this.GetComponentInChildren<Animation>().Play("InkDyingPose");
+        GameObject.Find("Nekromanta").GetComponent<Nekromanta>().rusza_sie = false;
         Destroy(this.gameObject, 2);
     }
 }

@@ -14,13 +14,13 @@ public class Wywolanie : MonoBehaviour
     bool skonczona = false;
     GameObject partner;
     float wartosc = 100;
+    public AudioClip growl;
     // Use this for initialization
     void Start()
     {
         partner = GameObject.FindGameObjectWithTag("GameController");
 
         //
-
         //wywolaj();
 
         //
@@ -52,7 +52,7 @@ public class Wywolanie : MonoBehaviour
                     skonczona = true;
                     //Debug.Log("anim!");
                     jednorozec.GetComponentInChildren<Animation>().Play("Unicorn");
-                    Destroy(GameObject.Find("Nekromanta"), 1);
+                    Destroy(GameObject.Find("Nekromanta"), 0.5f);
                 }
             }
         }
@@ -61,6 +61,7 @@ public class Wywolanie : MonoBehaviour
     public void wywolaj()
     {
         wywolana = true;
+        GameObject.Find("GameController").GetComponent<AudioSource>().PlayOneShot(growl);
         Gra gr = partner.GetComponent<Gra>();
         wartosc = gr.stability;
         if (wartosc > 70)
@@ -118,5 +119,6 @@ public class Wywolanie : MonoBehaviour
         }
         yield return new WaitForSeconds(2);
         Instantiate(fireball, transform.position + Vector3.up * 4f, transform.rotation);
+        przyzwany.GetComponentInChildren<Animation>().Play("idle");
     }
 }

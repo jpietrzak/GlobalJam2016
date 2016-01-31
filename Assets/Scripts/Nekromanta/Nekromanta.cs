@@ -57,8 +57,8 @@ public class Nekromanta : MonoBehaviour {
                     Debug.Log("child");
                     if (p.GetComponent<Przedmioty>().zamiany == 1)
                     {
-                        tmp = tmp + 10;
-                        Debug.Log("+10");
+                        tmp = tmp + 15;
+                        Debug.Log("+15");
                     }
                 }
                 else if (p.gameObject.name == "swiecznik_stoj")
@@ -70,8 +70,8 @@ public class Nekromanta : MonoBehaviour {
                             Debug.Log("child");
                             if (r.GetComponent<Przedmioty>().zamiany == 1)
                             {
-                                tmp = tmp + 10;
-                                Debug.Log("+10");
+                                tmp = tmp + 15;
+                                Debug.Log("+15");
                             }
                         }
                     }
