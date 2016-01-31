@@ -9,10 +9,11 @@ public class Wywolanie : MonoBehaviour
     public GameObject rozowy_dymek;
     public GameObject przyzwany;
     public GameObject efekt;
+    public GameObject fireball;
     bool wywolana = false;
     bool skonczona = false;
     GameObject partner;
-    float wartosc = 14;
+    float wartosc = 100;
     // Use this for initialization
     void Start()
     {
@@ -20,7 +21,7 @@ public class Wywolanie : MonoBehaviour
 
         //
 
-        wywolaj();
+        //wywolaj();
 
         //
     }
@@ -46,7 +47,7 @@ public class Wywolanie : MonoBehaviour
             {
                 przyzwany.transform.localScale += Vector3.one * 0.1f;
 
-                if(przyzwany.transform.localScale.x > 3f)
+                if(przyzwany.transform.localScale.x > 4f)
                 {
                     skonczona = true;
                     //Debug.Log("anim!");
@@ -61,22 +62,27 @@ public class Wywolanie : MonoBehaviour
     {
         wywolana = true;
         Gra gr = partner.GetComponent<Gra>();
-        //wartosc = gr.stability;
+        wartosc = gr.stability;
         if (wartosc > 70)
         {
             Debug.Log("Wielki demon");
-            przyzwany = Instantiate(demon, transform.position, transform.rotation) as GameObject;
+            przyzwany = Instantiate(demon, transform.position + Vector3.up * 6f, transform.rotation) as GameObject;
             przyzwany.transform.localRotation = Quaternion.Euler(0, -140, 0);
-            przyzwany.transform.localScale = Vector3.one * 4f;
-            Destroy(Instantiate(wybuch, transform.position, transform.rotation) as GameObject, 1);
+            przyzwany.transform.localScale = Vector3.one * 1f;
+            przyzwany.GetComponentInChildren<Animation>().Play("kill");
+            przyzwany.transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform.position);
+            przyzwany.transform.Rotate(Vector3.up * 180);
+            Instantiate(wybuch, transform.position, transform.rotation);
+            StartCoroutine(instFireball());
         }
         else if (wartosc > 40)
         {
             Debug.Log("Mały demon");
             efekt = Instantiate(rozowy_dymek, transform.position, transform.rotation) as GameObject;
-            przyzwany = Instantiate(demon, transform.position, transform.rotation) as GameObject;
-            przyzwany.transform.localScale = Vector3.one * 1f;
+            przyzwany = Instantiate(demon, transform.position + Vector3.up * 4f, transform.rotation) as GameObject;
+            przyzwany.transform.localScale = Vector3.one * 0.2f;
             przyzwany.transform.localRotation = Quaternion.Euler(0, -140, 0);
+            przyzwany.GetComponentInChildren<Animation>().PlayQueued("idle");
             Destroy(efekt, 3);
         }
         else if (wartosc > 15)
@@ -86,7 +92,7 @@ public class Wywolanie : MonoBehaviour
         else
         {
             Debug.Log("jednorożec");
-            przyzwany = Instantiate(jednorozec, transform.position + Vector3.up * 4, transform.rotation) as GameObject;
+            przyzwany = Instantiate(jednorozec, transform.position + Vector3.up * 9, transform.rotation) as GameObject;
             przyzwany.transform.localScale = Vector3.one * 0.1f;
             przyzwany.transform.localRotation = Quaternion.Euler(0, -140, 0);
         }
@@ -96,5 +102,17 @@ public class Wywolanie : MonoBehaviour
     {
         yield return new WaitForSeconds(t);
         Destroy(Instantiate(wybuch, transform.position + Vector3.right * Random.Range(0,0.1f) + Vector3.forward * Random.Range(0,0.1f), transform.rotation) as GameObject, 1);
+    }
+
+    IEnumerator instFireball()
+    {
+        foreach(GameObject g in GameObject.FindObjectsOfType<GameObject>())
+        {
+            Debug.Log("!");
+            if(g.tag != "Player" && g.tag != "GameController")
+            g.tag = "Fireball";
+        }
+        yield return new WaitForSeconds(2);
+        Instantiate(fireball, transform.position + Vector3.up * 4f, transform.rotation);
     }
 }

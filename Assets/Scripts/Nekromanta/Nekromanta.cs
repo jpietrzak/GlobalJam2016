@@ -27,10 +27,12 @@ public class Nekromanta : MonoBehaviour {
     void Update() {
         if (rusza_sie && ile_petli > 0)
         {
+            //this.GetComponentInChildren<Animation>().Play("Armature.001|Cylinder.001|Take 001|BaseLayer");
             //Debug.Log(cel);
             if(Vector3.Distance(this.gameObject.transform.position, trasa[cel].transform.position) > 0.1)
             {
                 this.transform.position = Vector3.MoveTowards(this.transform.position, trasa[cel].transform.position, szybkosc * Time.deltaTime);
+                this.transform.LookAt(trasa[cel].transform.position);
             }
             else
             {

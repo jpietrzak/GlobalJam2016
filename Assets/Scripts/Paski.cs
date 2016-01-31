@@ -27,10 +27,10 @@ public class Paski : MonoBehaviour
 
 	void Update ()
     {
-        if (stabilityBar.GetComponent<RectTransform>().sizeDelta.x != GameObject.FindGameObjectWithTag("GameController").GetComponent<Gra>().stability * barWidth / 100)
+        if (stabilityBar.GetComponent<RectTransform>().sizeDelta.x != GameObject.Find("GameController").GetComponent<Gra>().stability * barWidth / 100)
         {
-            stabilityBar.GetComponent<RectTransform>().sizeDelta = new Vector2(GameObject.FindGameObjectWithTag("GameController").GetComponent<Gra>().stability * barWidth / 100, 20);
-            GameObject.Find("stabilityPercent").GetComponent<Text>().text = GameObject.FindGameObjectWithTag("GameController").GetComponent<Gra>().stability.ToString()+"%";
+            stabilityBar.GetComponent<RectTransform>().sizeDelta = new Vector2(GameObject.Find("GameController").GetComponent<Gra>().stability * barWidth / 100, 20);
+            GameObject.Find("stabilityPercent").GetComponent<Text>().text = GameObject.Find("GameController").GetComponent<Gra>().stability.ToString()+"%";
         }
 
         //Debug.Log(Time.time + " ; " + startTime + " ; "  + levelTime + " ; " + barWidth);

@@ -9,6 +9,7 @@ public class NekromantaColider : MonoBehaviour {
     }
     void OnTriggerEnter(Collider collision)
     {
+        //Debug.Log(collision.gameObject.name);
         if (collision.GetComponentInParent<Przedmioty>())
         {
             Przedmioty prz = collision.GetComponentInParent<Przedmioty>();

@@ -21,6 +21,7 @@ public class Fireball : MonoBehaviour {
             //Debug.Log("touched fireboll!");
             Destroy(other.gameObject);
             Destroy(objec);
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<Gra>().endGame(false);
         }
         else
         {
