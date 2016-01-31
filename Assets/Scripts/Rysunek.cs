@@ -69,7 +69,7 @@ public class Rysunek : MonoBehaviour {
                     }
                     break;
                 case 2:
-                    doneDistance += Mathf.Abs( Input.GetAxis("Mouse ScrollWheel") * 7);
+                    doneDistance += Mathf.Abs( Input.GetAxis("Mouse ScrollWheel") * 14);
                     break;
             }
 

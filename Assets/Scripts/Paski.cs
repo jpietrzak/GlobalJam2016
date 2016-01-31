@@ -15,7 +15,7 @@ public class Paski : MonoBehaviour
 
     void Start()
     {
-        levelTime = 20;
+        levelTime = 71;
         startTime = Time.time;
         barWidth = Screen.width * 0.2f;
 
