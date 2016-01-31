@@ -20,13 +20,15 @@ public class Przedmioty : MonoBehaviour {
             {
                 this.GetComponent<Renderer>().material.mainTexture = materialPoZmianaie;
             }
-            else if (name == "swiecznik_stoj")
+            else if (name == "swiecznik_st")
             {
+                gameObject.GetComponent<Renderer>().enabled = false;
                 foreach (Transform r in this.GetComponentInChildren<Transform>())
                 {
                     if (r.GetComponent<ParticleSystem>())
                     {
-                        r.GetComponent<ParticleSystem>().enableEmission = false;
+                        ParticleSystem.EmissionModule ps = r.GetComponent<ParticleSystem>().emission;
+                        ps.enabled = false;
                     }
                 }
             }
@@ -39,17 +41,20 @@ public class Przedmioty : MonoBehaviour {
         if((zamiana == false)&& (zamiany ==1))
         {
             Debug.Log("render");
-            if (name != "pentagram")
+            if (name == "pentagram")
             {
                 this.GetComponent<Renderer>().material.mainTexture = orginalny;
             }
-            else if (name == "swiecznik_stoj")
+            else if (name == "swiecznik_st")
             {
+                Debug.Log("swiecznik");
+                gameObject.GetComponent<Renderer>().enabled = true;
                 foreach (Transform r in this.GetComponentInChildren<Transform>())
                 {
                     if (r.GetComponent<ParticleSystem>())
                     {
-                        r.GetComponent<ParticleSystem>().enableEmission = true;
+                        ParticleSystem.EmissionModule ps = r.GetComponent<ParticleSystem>().emission;
+                        ps.enabled = true;
                     }
                 }
             }

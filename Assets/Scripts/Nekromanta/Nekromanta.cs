@@ -99,7 +99,7 @@ public class Nekromanta : MonoBehaviour {
     public void obniz_stability(int ile, GameObject target)
     {
         Debug.Log("stability - " + ile);
-        GameObject cos = Instantiate(costamtext, target.transform.position + Vector3.up * 4, Quaternion.Euler(0, 180, 0)) as GameObject;
+        GameObject cos = Instantiate(costamtext, target.transform.position + Vector3.up * 10, Quaternion.Euler(0, 180, 0)) as GameObject;
         cos.GetComponent<TextMesh>().text = "- " + ile.ToString();
         cos.transform.SetParent(target.transform);
         GameObject.FindGameObjectWithTag("GameController").GetComponent<Gra>().stability -= ile;
